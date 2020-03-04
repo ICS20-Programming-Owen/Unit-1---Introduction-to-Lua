@@ -2,14 +2,36 @@
 --Name:Owen
 --Course:ISC20
 --This program displays four different polygons.
+------------------------------------------------------------------------
+display.setStatusBar(display.HiddenStatusBar)
+
 
 local myTriangle
-local myTrapezoid
-local myHexagon
-local my --------------------------------------------------------------------------------------
---
--- main.lua
---
------------------------------------------------------------------------------------------
+local triangleText = display.newText
+local triangleVertices = {0,-50, -50,50, 50,50}
+local triangleX = 130
+local triangleY = 100
 
--- Your code here
+
+myTriangle = display.newPolygon (triangleX, triangleY, triangleVertices )
+--------------------------------------------------------------------------------------
+
+local myTrapezoid
+local trapezoidText
+local trapezoidVertices = {-50,-50, -100,50, 100,50, 50,-50}
+local trapezoidX = 500
+local trapezoidY = 500
+
+myTrapezoid = display.newPolygon (trapezoidX, trapezoidY, trapezoidVertices )
+---------------------------------------------------------------------------------------
+
+
+local myHexagon
+local myPentagon
+local myHeptagon
+
+
+
+
+
+
