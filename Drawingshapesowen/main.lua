@@ -6,6 +6,7 @@
 
 ---------------------------------------------------
 
+
 --hide the Status Bar
 display.setStatusBar(display.HiddenStatusBar)
 
@@ -13,7 +14,7 @@ set.fillColour(0.1, 0.4, 0.6)
 
 set.strokeColour(0.9, 0.7, 0.6)
 
-local rect =display.newRect (160, 240, 150, 50)
+local rect = display.newRect (160, 240, 150, 50)
 
 local display.newtriangle (350, 420, 340, 240)
 
