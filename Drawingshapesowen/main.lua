@@ -68,39 +68,45 @@ local pentagonText = display.newText("Pentagon", 285, 290, nil, 50)
 
 
 
-set.fillColour(0.5, 0.6, 0.4)
+myPentagon:setFillColor(0.5, 0.6, 0.4)
 
-set.strokeColour(0.1, 0.4, 0.6)
+myPentagon:setStrokeColor(0.1, 0.4, 0.6)
 
 ------------------------------------------------------------------------------------------
 
 
-set.fillcolour(0.4, 0.5, 0.6)
-
-strokeColour(0.2, 0.1, 0.5)
-
-
-local myHeptagon
-local heptagonText = display.newText("Heptagon")
 local heptagonVertices = {-900,-900, -950,900, 950,900, 900,-900, -850,850, }
 local heptagonX = 900
 local heptagonY = 870
 
-myHeptagon = diplay.newPolygon (hexagonX, heptagonY, heptagonVertices)
+
+local myHeptagon = display.newPolygon(heptagonX, heptagonY, heptagonVertices)
+local heptagonText = display.newText("Heptagon", 885, 860, nil, 50)
+
+
+
+
+myHeptagon:setFillColor(0.4, 0.5, 0.6)
+
+myHeptagon:setStrokeColor(0.2, 0.1, 0.5)
+
+ 
 ----------------------------------------------------------------------------------------
 
-set.fillColour(0.4, 0.3, 0.9)
-
-set.strokeColour(0.3, 0.4, 0.6)
-
-
-local myRectangle
-local my RectangleText = display.newText("Rectangle")
 local rectangleVertices = {-700,-700, -650, 600, 650,700, 700,-700}
 local rectengleX = 700
 local rectangleY = 670
 
-myRectangle = display.newRect {rectengleX, rectangleY, rectangleVertices}
+local myRectangle = display.newRect(rectengleX, rectangleY, rectangleVertices)
+local my RectangleText = display.newText("Rectangle", 685, 660, nil, 50)
+
+myRectangle:setFillColor(0.4, 0.3, 0.9)
+
+myRectangle:setStrokeColor(0.3, 0.4, 0.6)
+
+
+
+ 
 ---------------------------------------------------------------------------------------------/
 
 
