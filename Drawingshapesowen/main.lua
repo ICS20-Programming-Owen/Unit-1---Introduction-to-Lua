@@ -16,7 +16,8 @@ display.setStatusBar(display.HiddenStatusBar)
 
 
 
-local triangleVertices = {0,-50, -50,50, 50,50}
+
+local triangleVertices = {50,-50, -50,50, 50,50}
 local triangleX = 130
 local triangleY = 100
 
@@ -39,9 +40,9 @@ local trapezoidY = 30
 local myTrapezoid = display.newPolygon (trapezoidX, trapezoidY, trapezoidVertices )
 local trapezoidText = display.newText("Trapezoid", 485,490, nil, 50)
 
-myTrapezoid:setFillColor(0.1, 0.3, 0.8)
+myTrapezoid:setFillColor(0.3, 0.5, 0.8)
 
-myTrapezoid:setStrokeColor(0.5, 0.2, 0.3)
+myTrapezoid:setStrokeColor(0.5, 0.7, 0.8)
 
 ---------------------------------------------------------------------------------------
 
@@ -78,7 +79,7 @@ myPentagon:setStrokeColor(0.1, 0.4, 0.6)
 ------------------------------------------------------------------------------------------
 
 
-local heptagonVertices = {-100,-100 -150,100, 150,100, 100,-100, -150,150, }
+local heptagonVertices = {-50,-50 -50,100, 150,100, 100,-100, -150,150, }
 local heptagonX = 85
 local heptagonY = 100
 
@@ -96,16 +97,7 @@ myHeptagon:setStrokeColor(0.2, 0.1, 0.5)
  
 ----------------------------------------------------------------------------------------
 
-local rectangleVertices = {-100,-100, -150, 100, 150,100, 100,-100}
-local rectengleX = 85
-local rectangleY = 90
 
-local myRectangle = display.newRect(rectengleX, rectangleY, rectangleVertices)
-local my RectangleText = display.newText("Rectangle", 85, 60, nil, 50)
-
-myRectangle:setFillColor(0.4, 0.3, 0.9)
-
-myRectangle:setStrokeColor(0.3, 0.4, 0.6)
 
 
 
