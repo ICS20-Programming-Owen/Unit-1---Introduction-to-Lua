@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------------------
 
 -- hide the status bar
-display.setStatusbar(display.HiddenStatusBar)
+display.setStatusBar(display.HiddenStatusBar)
 
 -- sets the background colour 
 display.setDefault("background", 124/255, 249/255, 199/255)
@@ -43,3 +43,52 @@ local function HideCorrect()
 	correctObject.isVisible = false
 	AskQuestion()
 end 
+
+local function NumericFieldListener( event )
+
+	--User begins editing "numericField"
+	if (event.phase == "began" ) then
+
+		--clear the field 
+		event.target.text = ""
+
+	elseif event.phase == "submitted" then 
+
+		--when the answer is submitted (enter key is pressed) set the user input to the user's answer 
+		userAnswer = tonumber(event.target.text)
+
+		--if the users answer and the correct answer are the same:
+		if(userAnswer == correctAnswer) then 
+			correctObject.isVisible = true 
+			timer.performWithDelay(2000, HideCorrect)
+
+		end
+	end
+end
+
+------------------------------------------------------------------------------------------------------------------
+--OBJECT CREATION
+------------------------------------------------------------------------------------------------------------------
+
+--displays a question and sets the colour 
+questionObject = display.newText( "", display.contentWidth/3, display.contentHeight/2, nil, 50)
+questionObject:setTextColor(155/255, 42/255, 198/255)
+
+--create the correct text object and make it invisible
+correctObject = display.newText( "Correct!", display.contentWidth/3, display.contentHeight*2/3, nil, 50 )
+correctObject:setTextColor(155/255, 42/255, 198/255)
+correctObject.isVisible = false
+
+-- create numeric field
+numericField = native.newTextField( display.contentWidth/2, display.contentHeight/2, 150, 80)
+numericField.inputType = "number"
+
+-- add the event listener for the numeric field
+numericField:addEventListener( "userrInput", NumericFieldListener )
+
+-------------------------------------------------------------------------------------------------------------
+--FUNCTION CALLS
+-------------------------------------------------------------------------------------------------------------
+
+--call the function tp ask the question 
+AskQuestion()
