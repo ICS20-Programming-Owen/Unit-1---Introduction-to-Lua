@@ -6,23 +6,23 @@
 -----------------------------------------------------------------------------------------
 
 -- hide the status bar
-display.setsStatusBar(display.HiddenStatusbar)
+display.setStatusBar(display.HiddenStatusBar)
 
 --global variables
-scrollSpeed=3
+scrollSpeed = 3
 
 --background image with width and hieght
 local backgroundImage= display.newImageRect("Image/background.png", 2048, 1536)
 
 --character image with width and hieght
-local beetleship = display.newImageRect("Images/beetleship.png", 200, 200)
+local girl5 = display.newImageRect("Images/girl5.png", 200, 200)
 
 --set the image to be transparent
-beetleship.alpha = 0
+girl5.alpha = 0
 
 --set the initial x and y position of beetleship
-beetleship.x = 0
-beetleship.y = display.contentHieght/3
+girl5.x = 0
+girl5.y = display.contentHeight/3
 
 --Function: MoveShip
 --Input: this function accepts an event listener
@@ -30,9 +30,9 @@ beetleship.y = display.contentHieght/3
 --Description: This function adds the scroll speed to the x-value of the ship
 local function MoveShip(event)
 	--add the scrollSpeed to the x-value of the ship
-	beetleship.x = beetleship.x + scrollSpeed
+	girl5.x = girl5.x + scrollSpeed
 	--change the transparency every time it moves so that it fades out\
-    beetleship.alpha = beetleship.alpha = 0.01
+    girl5.alpha = girl5.alpha + 0.01
 end
 --Move ship will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
