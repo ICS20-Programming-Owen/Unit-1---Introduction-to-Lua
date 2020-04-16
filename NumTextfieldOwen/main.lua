@@ -22,7 +22,8 @@ local randomNumber1
 local randomNumber2
 local userAnswer 
 local correctAnswer 
-
+local points = 0
+local pointsText = display.newText("Points", -50,50, nil, 50)
 -------------------------------------------------------------------------------
 --LOCAL FUNCTIONS 
 -------------------------------------------------------------------------------
@@ -66,6 +67,13 @@ local function NumericFieldListener( event )
 	end
 end
 
+
+if (userAnswer == correctAnswer) then 
+	--give a point if the user gets the answer correct
+	point = points + 1
+
+	--update it in the display object 
+	pointsText.text = "points = " .. points
 ------------------------------------------------------------------------------------------------------------------
 --OBJECT CREATION
 ------------------------------------------------------------------------------------------------------------------
@@ -86,9 +94,13 @@ numericField.inputType = "number"
 -- add the event listener for the numeric field
 numericField:addEventListener( "userrInput", NumericFieldListener )
 
+pointsText = display.newText("Points = " ..points, display.contentWidth/3, display.contentHeight/3, nil, 50)
+
 -------------------------------------------------------------------------------------------------------------
 --FUNCTION CALLS
 -------------------------------------------------------------------------------------------------------------
 
 --call the function tp ask the question 
 AskQuestion()
+
+end 
