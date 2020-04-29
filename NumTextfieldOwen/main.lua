@@ -24,6 +24,7 @@ local userAnswer
 local correctAnswer 
 local points = 0
 local pointsText = display.newText("Points", -50,50, nil, 50)
+local incorrectText = display.newText("Incorrect", 400,500, nil, 50)
 -------------------------------------------------------------------------------
 --LOCAL FUNCTIONS 
 -------------------------------------------------------------------------------
