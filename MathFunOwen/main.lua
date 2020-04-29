@@ -31,6 +31,11 @@ local secondsLeft = 10
 local clockText
 local countDownTimer
 
+local livesText
+
+local gameOver
+
+
 --------------------------------------------------------------
 --SOUNDS
 -------------------------------------------------------------
@@ -166,7 +171,19 @@ correctObject.isVisible = false
 
 incorrectObject = display.newText( "Incorrect!", display.contentWidth/2, display.contentHeight*1.5/3, nil, 45 )
 incorrectObject:setTextColor(50/255, 0/255, 255/255 )
-incorrectObject.isVisible = false
+incorrectObject.isVisible = true
+
+clockText = display.newText( "Time Left: 3", display.contentWidth/2, display.contentHeight*1.8/3, nil, 45 )
+clockText:setTextColor(50/255, 0/255, 255/255 )
+clockText.isVisible = true
+
+livesText = display.newText( "Lives Left: 2", display.contentWidth/2, display.contentHeight*2.5/3, nil, 50)
+livesText:setTextColor(50/255, 0/255, 255/255)
+livesText.isVisible = true 
+
+gameOver = display.newImage( "Images/gameOver (1).png", display.contentWidth, display.contentHeight)
+
+
 
 
 -----------------------------------------------------------------------------
