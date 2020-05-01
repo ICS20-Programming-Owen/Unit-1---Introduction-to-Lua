@@ -23,7 +23,7 @@ local scoreText = display.newText( "Score: 0", 200, 100, nil, 50 )
 local whacked = audio.loadSound( "Sounds/fire_bow_sound-mike-koenig.mp3" )
 
 -- create mole
-local mole = display.newImage( "Images/james.png", 0, 0 )
+local mole = display.newImage( "Images/cow.png", 0, 0 )
 
 	mole.x = display.contentCenterX
 	mole.y = display.contentCenterY
