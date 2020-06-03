@@ -25,3 +25,7 @@ textObject = display.newText( "Hello, Owen!", 500, 500, nil, 50)
 
 --sets the colour of the text 
 textObject:setTextColor(155/255, 42/255, 198/255)
+
+local textObject
+
+textObject = display.newText( "O.M", 500, 600, nil, 40)
